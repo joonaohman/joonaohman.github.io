@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+h1 {color: rgb(255, 255, 255); 
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+color:rgb(255, 255, 255);
+text-align: center;
+text-shadow: 0px 0px 0px;} /*tekstinvarjo (niitä voi lisätä useita jos lisäät "," väliin*/
+h2 {color:rgb(255, 255, 255);
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+  h3 {color:rgb(255, 255, 255);
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+  h4 {color:rgb(255, 255, 255);
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+  a {color:rgb(255, 255, 255);
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+  p {color:rgb(255, 255, 255);
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+body {background-image: url(cshomo.png);
+      background-size: cover;
+      background-attachment: fixed;
+
+}
+.image-container {
+  float: left;
+  margin-right: 10px;/* Adjust spacing between images and text as needed */
+}
+
+.float-left {
+  float: left;
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+.float-right {
+  float: right;
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+.block-img {
+  display: block;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(38, 46, 70);
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;}
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    }
+
+  #menu-checkbox {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0px;
+    transition: 0.5s;
+    }
+
+  .nav-links {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      justify-content: center;
+    }
+    .menu-icon {display: flex;}
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      background: rgb(38, 46, 70);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+  }
+  
+  .nav-links li {
+    text-align: center;
+  }
+
+  /* kun checkbox on päällä */
+  #menu-checkbox:checked ~ .nav-links {
+    display: flex;
+    max-height: 300px;
+  }
+
+  /* hamburger animaatio */
+  #menu-checkbox:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px,5px);
+  }
+
+  #menu-checkbox:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-checkbox:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px,-6px);
+  }
+
+
+main {width: 90%;
+    max-width: 1200px;
+    margin: auto; /* lohkon keskitys*/
+    border: 3px rgb(84, 100, 143); /* reunus */
+    padding: 20px; /* tyhjä tila taustan ja sisällön väliin */
+    background-color: rgb(58,71,106); /* taustaväri */
+    box-shadow: 10px 10px 10px; /* heittovarjo oikea ja al */
+    
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(25, 33, 57);
+} 
+ul li {float: left;
+}
+ul li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 150px;
+  text-decoration: none;
+}
+ul li a:hover{
+  background-color: rgb(0, 0, 0);
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: -10px;
+}
+.navbar li {
+  margin: 0 15px;
+}
